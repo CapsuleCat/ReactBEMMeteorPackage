@@ -1,6 +1,6 @@
 # ReactBEM for Meteor
 
-![Build Status](https://travis-ci.org/CapsuleCat/MeteorReactBEM.svg?branch=master)](https://travis-ci.org/CapsuleCat/MeteorReactBEM) [![BSD 3-clause License](https://img.shields.io/badge/license-BSD-blue.svg)](/LICENSE)
+[![Build Status](https://travis-ci.org/CapsuleCat/MeteorReactBEM.svg?branch=master)](https://travis-ci.org/CapsuleCat/MeteorReactBEM) [![BSD 3-clause License](https://img.shields.io/badge/license-BSD-blue.svg)](/LICENSE)
 
 BEM class names are systematic. So why write them yourself?
 
