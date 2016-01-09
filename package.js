@@ -8,7 +8,7 @@ Package.describe({
 
 function includeFiles(api) {
   api.use('ecmascript');
-  api.use('react');
+  api.use('react@0.14.3');
   api.addFiles('src/ClassBuilder.js');
   api.addFiles('src/ReactBEM.js');
 }

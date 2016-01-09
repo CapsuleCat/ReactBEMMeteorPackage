@@ -1,14 +1,6 @@
 // Alias the class builer
 let _ = ClassBuilder;
 
-// Shim because ReactDOM sometimes isn't packages
-// with react (?)
-if (typeof ReactDOM === 'undefined') {
-  ReactDOM = React.DOM;
-
-  ReactDOM.findDOMNode = React.findDOMNode;
-}
-
 var BEMTransformer = function() {
   this.get_child_modifiers = function(child) {
     if (typeof child === "string")
@@ -93,18 +85,12 @@ var BEMTransformer = function() {
     const changes = {}
 
     if (typeof props.children === 'object') {
-      const transformedChildren = React.Children.map(props.children, function (a) {
+      const children = React.Children.toArray(props.children)
+      const transformedChildren = children.map(function (a) {
         return fn(a, blocks, block_modifiers, translate);
       });
 
-      // If any of the transformedChildren are not equal to their
-      // counterpart, then there are changes!
-
-      var diffs = React.Children.count(transformedChildren,
-        ((transformed, i) => transformed != children[i])
-      );
-
-      if (diffs > 0) {
+      if (transformedChildren.some((transformed, i) => transformed != children[i])) {
         changes.children = transformedChildren
       }
     }

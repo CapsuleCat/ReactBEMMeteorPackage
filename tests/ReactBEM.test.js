@@ -11,7 +11,7 @@ describe("Completer Integration Tests", function() {
   };
 
   var getTypeOfDomNode = function (el) {
-    var reactComponent = el._reactInternalInstance._currentElement;
+    var reactComponent = el._reactInternalComponent._currentElement;
     var name = '';
     if (typeof reactComponent.type === "string") {
       name = reactComponent.type
