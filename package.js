@@ -8,7 +8,6 @@ Package.describe({
 
 function includeFiles(api) {
   api.use('ecmascript');
-  api.use('react@0.14.3');
   api.addFiles('src/ClassBuilder.js');
   api.addFiles('src/ReactBEM.js');
 }
@@ -21,6 +20,7 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('mike:mocha-package');
+  api.use('react@0.14.3');
   includeFiles(api);
   api.addFiles('tests/ReactBEM.test.js', ['client']);
 });
