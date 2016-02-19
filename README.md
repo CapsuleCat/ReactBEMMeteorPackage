@@ -4,6 +4,8 @@
 
 BEM class names are systematic. So why write them yourself?
 
+Note, as of Meteor 1.3, this will no longer be supported. Please use the original repo: [react-bem](https://github.com/cuzzo/react-bem).
+
 [See the Original author](https://github.com/cuzzo/react-bem)
 
 ## Installation
